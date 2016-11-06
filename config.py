@@ -8,5 +8,6 @@ config = {
 'folder_local' : 'pics',
 'folder_ftp' : 'files',
 'key_trigger' : Key.f5,
-'exit_key' : Key.esc
+'exit_key' : Key.esc,
+'key_combination' : (Key.ctrl, Key.shift, Key.f1),
 }
