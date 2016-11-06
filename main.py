@@ -3,6 +3,7 @@ import keygetter
 import os
 import tools
 import ftp
+import paste
 
 
 ss_bounds = keygetter.triggered()
@@ -33,3 +34,5 @@ path = screenshot.do_a_ss_and_return_path(upper_corner_coords, width_of_ss, heig
 filelink = '{prefix}{link}'.format(prefix = 'ftp://', link = ftp.upload_file(path))
 
 print (filelink)
+
+tools.copy_to_clipboard(filelink)
