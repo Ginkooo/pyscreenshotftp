@@ -13,7 +13,7 @@ How to install dependencies:
 2. Install pip for python 3.
 3. Run pip install -r /path/to/requirements.txt (change it to relative path to
    your requirements.txt)
-4. Install ImageMagick and xcopy
+4. Install ImageMagick and xclip
 
 
 
