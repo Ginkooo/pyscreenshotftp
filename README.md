@@ -8,11 +8,12 @@ You have to have ftp server connected for this to work (Anonymous access is
 preffered, but not necessary)
 
 How to install dependencies:
+
 1. Install Python 3 from your package manager or home site.
 2. Install pip for python 3.
 3. Run pip install -r /path/to/requirements.txt (change it to relative path to
    your requirements.txt)
-4. Install ImageMagick and xcopy
+4. Install ImageMagick and xclip
 
 
 
