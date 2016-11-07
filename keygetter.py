@@ -12,6 +12,12 @@ exit_key = config.get('exit_key')
 keys = config.get('key_combination')
 
 def triggered():
+    """Function used to encapsulate keystroke listening mechanism
+
+    Returns:
+    [] - Empty list in case listener is shutted down by esc
+    mouse_params - a list containing two mouse_pos lists, which contains registered mouse coordinates
+    """
 
     mouse_pos_1 = []
     mouse_pos_2 = []
@@ -19,6 +25,14 @@ def triggered():
     pressed = [False for x in keys]
 
     def on_press(key):
+        """That code executes when some key is pressed
+        Args:
+        Key:
+        key - key pressed
+
+        Returns:
+        bool: False - to turn off the listener"""
+
         print('{key} pressed'.format(key = key))
         if key in keys:
             idx = keys.index(key)
@@ -29,6 +43,14 @@ def triggered():
 
 
     def on_release(key):
+        """That code executes when some key is pressed
+        Args:
+        Key:
+        key - key released
+
+        Raises:
+        StopIteration - when raised, it stops the listener"""
+
         all_pressed = True
         for val in pressed:
             if not val:
@@ -46,6 +68,7 @@ def triggered():
 
         if not len(mouse_pos_1) or not len(mouse_pos_2):
             return []
+        #If listener is exited by pressing ESC mouse_pos_1 and mouse_pos_2 are empty
 
         mouse_params = mouse_pos_1[0], mouse_pos_2[0]
         return mouse_params

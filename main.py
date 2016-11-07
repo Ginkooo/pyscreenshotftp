@@ -29,6 +29,8 @@ while True:
     else:
         upper_corner_coords.append(end[1])
 
+    #Unpacking of all needed_params to variables
+
 
     path = screenshot.do_a_ss_and_return_path(upper_corner_coords, width_of_ss, height_of_ss)
 
